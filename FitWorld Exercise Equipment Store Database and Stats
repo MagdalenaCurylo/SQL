@@ -1,0 +1,31 @@
+-- Create an exercise equipment store database
+
+
+CREATE TABLE FitWorld (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price INTEGER, times_purchased INTEGER);
+
+
+INSERT INTO 
+FitWorld 
+VALUES
+(1, "Elliptical machine", 4, 300, 11),
+(2, "Rowing machine", 6, 250, 9),
+(3, "Recumbent bike", 8, 220, 12),
+(4, "Treadmill", 12, 400, 8),
+(5, "Bowflex", 6, 900, 4),
+(6, "Yoga mat", 25, 10, 75),
+(7, "Equipment mat", 17, 30, 13),
+(8, "Workout bench", 7, 80, 13),
+(9, "Adjustable dumbbell", 17, 170, 23),
+(10, "Adjustable kettlebell", 22, 160, 28),
+(11, "Medicine ball", 5, 15, 15),
+(12, "Swill ball", 8, 12, 32),
+(13, "Weight rack", 5, 35, 10),
+(14, "Jump rope", 24, 8, 76),
+(15, "Core Slider", 16, 11, 44)
+;
+
+SELECT * FROM FitWorld;
+
+-- equipment list grouped by price with one statistic.
+SELECT price, name, quantity FROM FitWorld GROUP BY price;
+
